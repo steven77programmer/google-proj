@@ -5,6 +5,14 @@ html,body{
     display:flex;
     flex-direction: column;
 }
+a{
+    all: unset;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+}
+a:hover{
+    text-decoration: underline;
+}
 
 /* header */
 .header{
@@ -17,6 +25,8 @@ html,body{
    font-size:14px;
    padding:0px 10px 0px 10px;
 }
+
+
 .nava{
     display: flex;
     justify-content: space-around;
@@ -43,6 +53,13 @@ html,body{
     display:flex;
     align-items: center;
 } 
+.navi a span{
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.navi a span:hover{
+    background-color: #d2d2d2;
+}
 
 
 /* main */
@@ -66,10 +83,14 @@ html,body{
     width: 48%;
     height:45%;
     /* border:1px solid black; */
-    text-align: center;
+   
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 .logo img{
-    width: 92%;
+    width: 90%;
     height: auto;
 }
 
@@ -85,7 +106,8 @@ html,body{
     display: flex;
     align-items:center;
 
-    margin-top:1%;
+    margin-top:2%;
+    /* margin-top:5px; */
     margin-bottom:4%;
 
     border:1px solid #d2d2d2;
@@ -106,10 +128,17 @@ html,body{
 .search-box:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Even shadow: 0px offset, 0px offset, 15px blur */
 }
-
-.search-box textarea{
+.search-tbox{
     width:100%;
     height: 96.5%;
+    min-height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-tbox textarea{
+    width:100%;
+    height: 100%;
     /* color:#1f1f1f; */
     color:#474747;
     resize: none; /* Remove bottom-right resize handle */
@@ -117,14 +146,17 @@ html,body{
     box-sizing: border-box; 
     background-color: #ffffff;
     border:none;
+    /* border:1px solid black; */
     outline:none;
     /* pointer-events: none; */
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1;
-    padding:1.75% 0% 0% 0%; /* Adjust padding for vertical alignment */
-    font-size: 18px;
+    padding-top:2.8%; 
+    /* box-sizing: border-box; */
+    /* font-size: 1.25rem; */
+    font-size: 17px;
 }
-.search-icon, .mic-icon,.lense-icon{
+.search-icon, .mic-icon,.lense-icon,.clear-icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,6 +167,12 @@ html,body{
     height:100%;
     /* border:1px solid black; */
 
+}
+.search-box .clear-icon{
+    width:10%;
+    height:100%;
+    /* border:1px solid black; */
+    display: none;
 }
 .search-box .mic-icon{
     width:10%;
@@ -156,37 +194,53 @@ html,body{
     border-top-left-radius: 50%; 
     border-bottom-left-radius: 50%; 
 } 
-.search-icon img,.mic-icon img,.lense-icon img{
+.search-icon img,.mic-icon img,.lense-icon img,.clear-icon img{
     width: 40%;
     height:auto;
     /* filter: brightness(0) invert(1); */
    
     /* mix-blend-mode: multiply; */
 }
+.clear-icon img{
+    width: 47%;
+
+}
 .mic-icon img,.lense-icon img{
-    width: 60%;
+    width: 65%;
 }
 
 /* total height:65(45+15+5) */
 .btn-cont{
     width:100%;
     height:12%;
+    max-height:46px;
+    min-height: 40px;
     /* border:1px solid black; */
     display: flex;
     justify-content: center;
-    gap:1.25%;
+    gap:1.5%;
 }
-.btn-cont button{
+.btn-cont a{
+    height:100%;
+    width:16%;
+   
+    /* border:1px solid black; */
+   
+}
+ .btn-cont a button{/*.btn-cont button{ */
+    height:100%;
+    width:100%;
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 4px;
+    padding:1% 4% 1% 4%;
     color: #3c4043;
     font-family: Arial, sans-serif;
     font-size: 14px;
     transition: box-shadow 0.15s ease;
 }
 
-.btn-cont button:hover{
+.btn-cont a button:hover{
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Even shadow: 0px offset, 0px offset, 15px blur */
 }
 
