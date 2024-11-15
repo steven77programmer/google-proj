@@ -2,7 +2,9 @@
 
 <html>
     <head>
-        <title>Google</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="icon" href="assets/googlelogotitleee.png" type="image/png">
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=experiment" />
@@ -11,23 +13,36 @@
         
         
         <script src="index.js" defer></script>
+        <title>Google</title>
        
     </head>
     <body>
+
       <div class="header">
         <!-- <p>header</p> -->
          <!-- add cross and links to the tags -->
          <div class="nava">
             <div><a href="https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header">About</a></div>
-            <div><a href="">Store</a></div>
+            <div><a href="https://store.google.com/in/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB&pli=1">Store</a></div>
          </div>
          <div class="navb">
             <div class="navbb">
-                <div><a href="">Gmail</a></div>
-                <div><a href="">Images</a></div>
-                <div class="navi"><a href=""><span class="material-symbols-outlined">experiment</span></a></div>
-                <div class="navi"><a href=""><span class="material-icons">apps</span></a></div>
-                <div class="navi"><a href=""><span class="material-icons">account_circle</span></a></div>
+                <div><a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Gmail</a></div>
+                <div><a href="https://www.google.co.in/imghp?hl=en&authuser=0&ogbl">Images</a></div>
+                <div class="navi"  ><a href="https://labs.google.com/search?source=hp&authuser=0" ><span class="material-symbols-outlined" data-tooltip="Google Labs"   >experiment</span></a></div>
+                <div class="navi" id="navimen">
+                    <a><span class="material-icons"             data-tooltip="Google Apps"   >apps</span></a>
+                    <!-- <div class="apps-menu" id="apps-menu" >
+                        <a href="https://mail.google.com" target="_blank">Gmail</a>
+                        <a href="https://drive.google.com" target="_blank">Google Drive</a>
+                        <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                        <a href="https://calendar.google.com" target="_blank">Google Calendar</a>
+                        <a href="https://docs.google.com" target="_blank">Google Docs</a>
+                        <a href="https://photos.google.com" target="_blank">Google Photos</a>
+                    </div> -->
+                </div>
+                <div class="navi" ><a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act&gar=WzJd&nlr=1" ><span class="material-icons"             data-tooltip="Google Account">account_circle</span></a></div>
            </div>
          </div>
     </div>
@@ -37,20 +52,23 @@
         <div class="search-cont">
            <div class="logo"><img src="assets/googlelogo.png" alt="Google"/></div>
            <!-- remaining part -->
-             <div class="search-box"  tabindex="0">
+             <div class="search-box"  tabindex="0" title="Search">
                 <!-- working here backround of icon issue -->
                 <div class="search-icon"><img src="assets/search-iconn.png" alt="search-icon"/></div>
                 <div class="search-tbox"><textarea id="text-input" rows="1" autofocus="true"></textarea></div>
-                <div class="clear-icon" id="clear-icon" title="clear"><img src="assets/clear-iconn.png" alt="clear-icon"/></div>
+                <!-- <div class="clear-icon" id="clear-icon" title="clear"><img src="assets/clear-iconn.png" alt="clear-icon"/></div>
                 <div class="mic-icon" title="Search by voice"><img src="assets/mic-iconn.png" alt="mic-icon"/></div>
-                <div class="lense-icon" title="Search by image"><img src="assets/lense-iconn.png" alt="lense-icon"/></div>
+                <div class="lense-icon" title="Search by image"><img src="assets/lense-iconn.png" alt="lense-icon"/></div> -->
+                <div class="clear-icon" id="clear-icon" data-tooltip="clear"><img src="assets/clear-iconn.png" alt="clear-icon"/></div>
+                <div class="mic-icon" data-tooltip="Search by voice"><img src="assets/mic-iconn.png" alt="mic-icon"/></div>
+                <div class="lense-icon" data-tooltip="Search by image"><img src="assets/lense-iconn.png" alt="lense-icon"/></div>
             </div>
              
             <div class="btn-cont">
-                <a href=""><button>Google Search</button> </a>
-                <a href=""><button>I'm Feeling Lucky</button></a>
+                <a id="google-search"><button>Google Search</button> </a>
+                <a href="https://doodles.google/"><button>I'm Feeling Lucky</button></a>
             </div>
-          
+          <!-- conitnue mobike friendly here -->
             <div class="lang-cont">
                 <p>Google offered in: </p>
                 <ul type="none">
@@ -78,14 +96,14 @@
         <!-- continue from footer -->
          <div class="footb">
             <div class="footb1">
-                <div><a href="">Advertising</a></div>
-                <div><a href="">Business</a></div>
-                <div><a href="">How Search Works</a></div>
+                <div><a href="https://ads.google.com/intl/en_in/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></div>
+                <div><a href="https://www.google.com/intl/en_in/business/">Business</a></div>
+                <div><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a></div>
             </div>
             <div class="footb2">
-                <div><a href="">Privacy</a></div>
-                <div><a href="">Terms</a></div>
-                <div><a href="">Settings</a></div>
+                <div><a href="https://policies.google.com/privacy?hl=en-IN&fg=1">Privacy</a></div>
+                <div><a href="https://policies.google.com/terms?hl=en-IN&fg=1">Terms</a></div>
+                <div><a href="https://www.google.co.in/preferences?hl=en-IN&fg=1">Settings</a></div>
             </div> 
          </div>
     </div>

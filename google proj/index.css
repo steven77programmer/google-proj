@@ -1,10 +1,21 @@
 html,body{
     height:100%;
     width:100%;
+    /* max-width: 2000px; */
+    /* border:1px solid black; */
     margin:0;
+    padding: 0;
+ 
     display:flex;
     flex-direction: column;
 }
+/* body{
+    border:1px solid blue;
+
+}
+html{
+    border:1px solid red;
+} */
 a{
     all: unset;
     cursor: pointer;
@@ -19,11 +30,15 @@ a:hover{
    /* background: cyan;  */
    color:#1f1f1f;
    height:10%;
+   width: 100%;
    display: flex;
    flex-direction: row;
+   justify-content: flex-start;
    font-family: Arial, Helvetica, sans-serif;
-   font-size:14px;
-   padding:0px 10px 0px 10px;
+   /* font-size:14px; */
+   font-size:0.85rem;
+   /* padding:0px 10px 0px 10px; */
+   /* border: 1px solid black; */
 }
 
 
@@ -32,6 +47,7 @@ a:hover{
     justify-content: space-around;
     /* border:1px solid black; */
     width:10%;
+    
 }
 .navb{
     display: flex;
@@ -44,6 +60,7 @@ a:hover{
     justify-content: space-around;
     /* border:1px solid black; */
     width:25%;
+    /* gap:2%; */
 }
 /* .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
@@ -52,6 +69,7 @@ a:hover{
 .navbb div,.nava div{
     display:flex;
     align-items: center;
+    /* border:1px solid black; */
 } 
 .navi a span{
     border-radius: 50%;
@@ -67,9 +85,11 @@ a:hover{
 .main{
     /* background:blue; */
     height:72%;
+    width: 100%;
     display:flex;
     justify-content: center;
     align-items:center;
+    /* border:1px solid black; */
 }
 .search-cont{
     width:60%;
@@ -131,14 +151,16 @@ a:hover{
 .search-tbox{
     width:100%;
     height: 96.5%;
-    min-height: 42px;
+    /* min-height: 42px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;     
+    /* border:1px solid blue; */
 }
 .search-tbox textarea{
     width:100%;
-    height: 100%;
+    height: 40px;
     /* color:#1f1f1f; */
     color:#474747;
     resize: none; /* Remove bottom-right resize handle */
@@ -150,8 +172,12 @@ a:hover{
     outline:none;
     /* pointer-events: none; */
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    /* align-items: center; */
+    /* align-content: center; */
     line-height: 1;
-    padding-top:2.8%; 
+    padding: 0;
+    padding-top:11px; 
     /* box-sizing: border-box; */
     /* font-size: 1.25rem; */
     font-size: 17px;
@@ -222,7 +248,7 @@ a:hover{
 }
 .btn-cont a{
     height:100%;
-    width:16%;
+    width:21%;
    
     /* border:1px solid black; */
    
@@ -236,12 +262,16 @@ a:hover{
     padding:1% 4% 1% 4%;
     color: #3c4043;
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.85rem;
     transition: box-shadow 0.15s ease;
 }
 
 .btn-cont a button:hover{
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Even shadow: 0px offset, 0px offset, 15px blur */
+}
+.btn-cont a button:focus{
+     border: 1px solid #005dbb;
 }
 
 /* total height:77(45+15+5+12) */
@@ -262,13 +292,14 @@ padding-right:0px;
 /* border: 1px solid black; */
 }
 ul{
-width:53%;
-display: flex;
-justify-content: flex-start;
-padding-left:1%;
-gap:1.65%;
-color:#1a0dab;
-/* border: 1px solid black; */
+    width:53%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left:1%;
+    gap:1.65%;
+    color:#1a0dab;
+    /* border: 1px solid black; */
 }
 ul:visited{
     color:#800080;
@@ -284,6 +315,7 @@ ul:active{
 .footer{
     background: #eceded;
     height:18%;
+    width: 100%;
     color:#1f1f1f;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -327,3 +359,392 @@ width:28%;
     margin-right:2%;
     width:18%;
 }
+
+
+/* addition feature */
+
+/* google apps */
+#navimen {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Hidden menu */
+.apps-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+/* Styling for each app link */
+.apps-menu a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.apps-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Add tooltip styling (optional, reuse from previous code) */
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+/* tool tip */
+
+/* Tooltip container */
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Tooltip styling */
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -60%; /* Position the tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    /* border-radius: 5px; */
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+/* Tooltip arrow */
+[data-tooltip]::after {
+    content: '';
+    position: absolute;
+    bottom: -100%; /* Adjust to align with tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+/* Show tooltip on hover */
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+/* mobile-friendly */
+
+/* work on the header main footer just reducing height */
+
+  /* Styles for screens smaller than 536px */
+    /* parent heights: 10 72 18 %*/
+
+    @media(max-width: 1050px) {
+        .header{
+            font-size: 0.82rem;
+        }
+        .nava{
+            width:12%;
+        }
+        .navbb{
+            width:32%;
+        }
+
+
+        .search-icon img,.mic-icon img,.lense-icon img,.clear-icon img{
+            /* width: 40%; */
+            width: 45%;
+        }
+        .clear-icon img{
+            /* width: 47%; */
+            width: 52%;
+        }
+        .mic-icon img,.lense-icon img{
+            /* width: 65%; */
+            width: 70%;
+        }
+        
+
+
+        .btn-cont a{
+            width:24%;
+           
+        }
+         .btn-cont a button{
+            font-size: 0.8rem;
+         }
+
+         .lang-cont{
+            font-size: 12px;
+         }
+         
+         ul{
+            width:72%;
+            gap:2.6%;
+         }
+
+
+        
+            .foota div{
+                width:10%;
+            
+            }
+            .footb{
+                font-size:14px;
+            }
+            .footb1{
+                width:35%;
+            }
+            .footb2{
+                width:27%;
+            }
+
+    }
+
+    @media(max-width: 800px) {
+        .header{
+            font-size: 0.80rem;
+        }
+        .nava{
+            width:14%;
+        }
+        .navbb{
+            width:38%;
+        }
+
+
+        .search-icon img,.mic-icon img,.lense-icon img,.clear-icon img{
+            /* width: 40%; */
+            width: 50%;
+        }
+        .clear-icon img{
+            /* width: 47%; */
+            width: 57%;
+        }
+        .mic-icon img,.lense-icon img{
+            /* width: 65%; */
+            width: 75%;
+        }
+
+        .btn-cont a{
+            width:28%;
+           
+        }
+         .btn-cont a button{
+            font-size: 0.73rem;
+         }
+
+
+         .foota{
+            font-size:13px;
+            }
+            .foota div{
+                width:12%;
+            
+            }
+            .footb{
+                font-size:12px;
+            }
+            .footb1{
+                width:40%;
+            }
+            .footb2{
+                width:30%;
+            }
+
+    } 
+
+
+
+@media(max-width: 600px) {
+    .header{
+        font-size: 0.74rem;
+    }
+    .nava{
+        width:20%;
+        
+    }
+    .navbb{
+        width:54%;
+     
+    }
+
+
+    .search-cont{
+        width:70%;
+    }
+
+    .search-box{
+        width:85%;
+    }
+    .search-tbox textarea{
+        height: 30px;
+        padding-top:8px; 
+        font-size: 15px;
+    }
+
+    .search-icon img,.mic-icon img,.lense-icon img,.clear-icon img{
+        /* width: 40%; */
+        width: 55%;
+    }
+    .clear-icon img{
+        /* width: 47%; */
+        width: 62%;
+    }
+    .mic-icon img,.lense-icon img{
+        /* width: 65%; */
+        width: 80%;
+    }
+
+
+    .btn-cont{
+        gap:5%;
+    }
+
+    .btn-cont a{
+        width:34%;
+        height: 88%;
+    }
+     .btn-cont a button{
+        font-size: 0.61rem;
+     }
+
+     .lang-cont{
+        font-size: 11px;
+     }
+     
+     ul{
+        width:75%;
+        gap:4%;
+     }
+   
+    
+     .foota{
+        font-size:12px;
+        }
+        .foota div{
+            width:14%;
+        
+        }
+        .footb{
+            font-size:11px;
+        }
+        .footb1{
+            width:50%;
+        }
+        .footb2{
+            width:33%;
+        }
+    .header{
+        height:10%;
+    }
+    .main{
+        height:80%;
+    }
+    .footer{
+        height:10%;
+    }
+} 
+@media(max-width: 420px) {
+    .header{
+        font-size: 0.72rem;
+    }
+    .nava{
+        width:28%;
+      
+    }
+    .navbb{
+        width:80%;
+       
+    }
+
+    .search-cont{
+        width:80%;
+    }
+    .search-box{
+        height:15%;
+    }
+
+    .search-tbox textarea{
+        height: 30px;
+        padding-top:8px; 
+        font-size: 12px;
+    }
+
+
+    .search-icon img,.mic-icon img,.lense-icon img,.clear-icon img{
+        /* width: 40%; */
+        width: 65%;
+    }
+    .clear-icon img{
+        /* width: 47%; */
+        width: 70%;
+    }
+    .mic-icon img,.lense-icon img{
+        /* width: 65%; */
+        width: 88%;
+    }
+
+
+    
+    .btn-cont a{
+        width:38%;
+        height: 85%;
+       
+    }
+     .btn-cont a button{
+        font-size: 0.55rem;
+     }
+
+     .lang-cont{
+        margin-top:10%;
+        font-size: 9px;
+     }
+     ul{
+        width:85%;
+        gap:7%;
+     }
+
+     .foota{
+        font-size:10px;
+        }
+        .foota div{
+            width:15%;
+        
+        }
+        .footb{
+            font-size:9px;
+        }
+        .footb1{
+            width:60%;
+        }
+        .footb2{
+            width:37%;
+        }
+}
+
