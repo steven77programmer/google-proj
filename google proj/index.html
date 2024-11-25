@@ -60,9 +60,21 @@
                 <div class="mic-icon" title="Search by voice"><img src="assets/mic-iconn.png" alt="mic-icon"/></div>
                 <div class="lense-icon" title="Search by image"><img src="assets/lense-iconn.png" alt="lense-icon"/></div> -->
                 <div class="clear-icon" id="clear-icon" data-tooltip="clear"><img src="assets/clear-iconn.png" alt="clear-icon"/></div>
-                <div class="mic-icon" data-tooltip="Search by voice"><img src="assets/mic-iconn.png" alt="mic-icon"/></div>
-                <div class="lense-icon" data-tooltip="Search by image"><img src="assets/lense-iconn.png" alt="lense-icon"/></div>
+                <div class="mic-icon" data-tooltip="Search by voice" id="mic-icon"><img src="assets/mic-iconn.png" alt="mic-icon"/></div>
+                <div class="lense-icon" data-tooltip="Search by image" id="lense-icon">
+                    <img src="assets/lense-iconn.png" alt="lense-icon"/> 
+                    <input type="file" id="image-input" accept="image/*" style="display: none;" />
+                </div>
             </div>
+
+            <div id="voice-status" class="voice-status">
+                <div class="listening-animation"></div>
+                <p id="status-text">Listening...</p>
+            </div>
+            <audio id="start-sound" src="assets/start-sound.mp3"></audio>
+            <audio id="end-sound" src="assets/start-sound.mp3"></audio>
+
+            
              
             <div class="btn-cont">
                 <a id="google-search"><button>Google Search</button> </a>
